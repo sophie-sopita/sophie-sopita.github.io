@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuraBella - Servicios</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">AuraBella</div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/html/index.html">Inicio</a></li>
+                <li><a href="/html/productos.html">Productos</a></li>
+                <li><a href="/html/servicios.html">Servicios</a></li>
+                <li><a href="/html/blog.html">Blog</a></li>
+                <li><a href="/html/contacto.html">Contáctenos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="servicios">
+        <section class="descripcion">
+            <h2>Conoce tu Tipo de Piel</h2>
+            <p>Descubre cuál es tu tipo de piel respondiendo este cuestionario. Recibirás recomendaciones personalizadas basadas en tus respuestas.</p>
+        </section>
+
+        <section class="cuestionario">
+            <form id="formulario-piel">
+                <div class="pregunta">
+                    <label>¿Cómo se siente tu piel al final del día?</label>
+                    <select id="pregunta1" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="seca">Seca</option>
+                        <option value="mixta">Mixta</option>
+                        <option value="grasa">Grasa</option>
+                        <option value="normal">Normal</option>
+                    </select>
+                </div>
+                <div class="pregunta">
+                    <label>¿Tu piel tiende a enrojecerse fácilmente?</label>
+                    <select id="pregunta2" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="sensible">Sí, mucho</option>
+                        <option value="no-sensible">No, casi nunca</option>
+                    </select>
+                </div>
+                <div class="pregunta">
+                    <label>¿Con qué frecuencia aparece brillo en tu rostro?</label>
+                    <select id="pregunta3" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="siempre">Siempre</option>
+                        <option value="ocasionalmente">Ocasionalmente</option>
+                        <option value="nunca">Nunca</option>
+                    </select>
+                </div>
+                <div class="pregunta">
+                    <label>¿Tu piel es propensa a la aparición de acné?</label>
+                    <select id="pregunta4" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div class="pregunta">
+                    <label>¿Sientes que tu piel está deshidratada?</label>
+                    <select id="pregunta5" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="si">Sí, a menudo</option>
+                        <option value="no">No, nunca</option>
+                    </select>
+                </div>
+                <button type="button" class="btn-enviar" onclick="calcularTipoPiel()">Obtener Resultado</button>
+            </form>
+            <div id="resultado-piel" class="resultado"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 AuraBella. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function calcularTipoPiel() {
+            const respuesta1 = document.getElementById("pregunta1").value;
+            const respuesta2 = document.getElementById("pregunta2").value;
+            const respuesta3 = document.getElementById("pregunta3").value;
+            const respuesta4 = document.getElementById("pregunta4").value;
+            const respuesta5 = document.getElementById("pregunta5").value;
+
+            let resultado = "";
+
+            if (respuesta1 === "seca" && respuesta3 === "nunca") {
+                resultado = "Tienes piel seca. Te recomendamos usar productos hidratantes intensivos.";
+            } else if (respuesta1 === "grasa" || respuesta3 === "siempre") {
+                resultado = "Tienes piel grasa. Busca productos que controlen el exceso de sebo.";
+            } else if (respuesta1 === "mixta" && respuesta3 === "ocasionalmente") {
+                resultado = "Tienes piel mixta. Te sugerimos productos equilibrados que hidraten sin engrasar.";
+            } else {
+                resultado = "Tienes piel normal. Puedes usar productos suaves para mantener el balance.";
+            }
+
+            if (respuesta2 === "sensible") {
+                resultado += " Además, parece que tu piel es sensible, por lo que deberías usar productos libres de fragancias y suaves.";
+            }
+
+            if (respuesta4 === "si") {
+                resultado += " Tu piel es propensa al acné, por lo que te recomendamos usar productos que controlen la producción de sebo y prevengan brotes.";
+            }
+
+            if (respuesta5 === "si") {
+                resultado += " Tu piel parece deshidratada, por lo que es importante utilizar productos que proporcionen hidratación profunda.";
+            }
+
+            document.getElementById("resultado-piel").innerHTML = `
+                <h3>Resultado</h3>
+                <p>${resultado}</p>
+                <p>¿Quieres asesoría personalizada? <a href="contacto.html">Agenda una cita aquí</a>.</p>
+            `;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuraBella - Contáctenos</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        /* Estilos solo para el formulario */
+        .contacto {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .contacto h2 {
+            font-size: 2.5em;
+            color: #ff6d9c; /* Rosa fuerte de wonyoungism */
+            margin-bottom: 30px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 15px;
+            border: 1px solid #ff6d9c; /* Borde rosa */
+            border-radius: 8px;
+            font-size: 1em;
+            color: #333;
+        }
+
+        form input:focus, form textarea:focus {
+            border-color: #ff6d9c;
+            outline: none;
+        }
+
+        form button {
+            width: 100%;
+            padding: 14px;
+            background-color: #ff6d9c; /* Rosa fuerte */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #e25893; /* Rosa más oscuro al pasar el mouse */
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">AuraBella</div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/html/index.html">Inicio</a></li>
+                <li><a href="/html/productos.html">Productos</a></li>
+                <li><a href="/html/servicios.html">Servicios</a></li>
+                <li><a href="/html/blog.html">Blog</a></li>
+                <li><a href="/html/contacto.html">Contáctenos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contacto">
+        <h2>Contáctanos</h2>
+        <form>
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo Electrónico" required>
+            <textarea placeholder="Mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 AuraBella. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

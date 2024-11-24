@@ -1,0 +1,472 @@
+/* General Styling */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #fff4f5;
+  color: #333;
+}
+
+.footer {
+  background-color: #fde8e8;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  position: relative;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #f4b1b1;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+/* Chatbot Styling */
+#chatbot-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+#chat-header {
+  background-color: #f4b1b1;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#chat-body {
+  display: none;
+  padding: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+#chat-footer {
+  display: flex;
+  gap: 5px;
+  padding: 10px;
+}
+
+#chat-footer input {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#chat-footer button {
+  background-color: #f4b1b1;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* General */
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    color: #333;
+    background-color: #fefefe;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Encabezado */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #ffe6f0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff8fb1;
+  }
+  
+  .navbar ul {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .navbar a {
+    font-size: 1rem;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .navbar a:hover {
+    color: #ff8fb1;
+  }
+  
+  /* Hero Section */
+  .hero {
+    height: 80vh;
+    background: linear-gradient(to right, #ffe6f0, #fff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+    color: #ff8fb1;
+  }
+  
+  .hero-text p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+  
+  .cta {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #ff8fb1;
+    color: white;
+    border-radius: 30px;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .cta:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Productos */
+  .productos {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .productos h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .producto {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .producto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .producto img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  
+  .btn-comprar {
+    margin-top: 0.5rem;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #ff8fb1;
+    color: white;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-comprar:hover {
+    background-color: #ff5f91;
+  }
+  
+  /* Pie de página */
+  .footer {
+    text-align: center;
+    padding: 1rem;
+    background: #ffe6f0;
+    color: #333;
+    margin-top: 2rem;
+  }
+  
+  .social-links a {
+    margin: 0 0.5rem;
+    font-size: 1rem;
+    color: #ff8fb1;
+    transition: color 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: #ff5f91;
+  }
+/* Estilos para la sección de contacto */
+.contacto {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fdf6f9; /* Fondo pastel */
+}
+
+.contacto h2 {
+  font-size: 2.5rem;
+  color: #d6869b; /* Rosa pastel */
+  margin-bottom: 10px;
+}
+
+.contacto p {
+  font-size: 1.2rem;
+  color: #444444;
+  margin-bottom: 30px;
+}
+
+/* Estilo del formulario */
+.contacto-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+  font-size: 1rem;
+  padding: 15px;
+  border: 1px solid #e4cdd3; /* Bordes suaves */
+  border-radius: 10px;
+  background-color: #ffffff; /* Fondo claro */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  transition: border-color 0.3s ease;
+}
+
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+  border-color: #d6869b; /* Rosa pastel en foco */
+  outline: none;
+}
+
+.contacto-form button {
+  background-color: #d6869b; /* Rosa pastel */
+  color: white;
+  font-size: 1.1rem;
+  padding: 15px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra más marcada */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contacto-form button:hover {
+  background-color: #bb5f7b; /* Rosa más intenso */
+  transform: scale(1.05); /* Efecto de zoom */
+}
+
+.contacto-form button:active {
+  transform: scale(1); /* Vuelve al tamaño original */
+}
+  /* Blog - Contenido */
+.blog-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: white;
+}
+
+.entrada {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f8f3f7;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.entrada img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.entrada-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.entrada-info h3 {
+  font-size: 1.5rem;
+  color: #d6869b;
+}
+
+.entrada-info p {
+  font-size: 1rem;
+  color: #444444;
+}
+
+.entrada-info p strong {
+  color: #d6869b;
+}
+/* Proyecto Scratch */
+.scratch-proyecto {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #fdf6f9;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.scratch-proyecto h2 {
+  font-size: 2rem;
+  color: #d6869b;
+  margin-bottom: 10px;
+}
+
+.scratch-proyecto p {
+  font-size: 1.2rem;
+  color: #444444;
+  margin-bottom: 20px;
+}
+
+.scratch-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* Sección de Contacto */
+.contacto {
+  padding: 40px 20px;
+  background-color: #fdf6f9;
+  text-align: center;
+}
+
+.contacto h2 {
+  font-size: 2.5rem;
+  color: #d6869b;
+  margin-bottom: 10px;
+}
+
+.contacto p {
+  font-size: 1.2rem;
+  color: #444444;
+  margin-bottom: 20px;
+}
+
+/* Estilo del Formulario */
+.formulario form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.campo {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.campo label {
+  font-size: 1rem;
+  color: #d6869b;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #e4cdd3;
+  border-radius: 20px;
+  background-color: #fdf6f9;
+  color: #444444;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  border-color: #d6869b;
+}
+
+textarea {
+  resize: none;
+}
+
+.btn-enviar {
+  background-color: #d6869b;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+  background-color: #bb5f7b;
+}
+
+/* Ajustes Responsivos */
+@media (max-width: 768px) {
+  .formulario form {
+    padding: 15px;
+  }
+
+  .campo input,
+  .campo textarea {
+    font-size: 0.9rem;
+  }
+
+  .btn-enviar {
+    font-size: 0.9rem;
+  }
+}

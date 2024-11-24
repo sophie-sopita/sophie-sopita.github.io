@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuraBella - Productos</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        /* Estilos generales para el carrito */
+        .carrito {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #ff6d9c; /* Rosa fuerte */
+            padding: 15px;
+            border-radius: 10px;
+            color: white;
+            font-size: 1.2em;
+            display: none;
+            cursor: pointer;
+        }
+
+        .productos-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .producto {
+            text-align: center;
+            border: 1px solid #ff6d9c;
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+
+        .producto:hover {
+            transform: scale(1.05);
+        }
+
+        .producto img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .btn-comprar {
+            display: inline-block;
+            background-color: #ff6d9c; /* Rosa */
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn-comprar:hover {
+            background-color: #e25893; /* Rosa oscuro */
+        }
+
+        .carrito-lista {
+            background-color: white;
+            color: #ff6d9c;
+            padding: 15px;
+            border-radius: 8px;
+            max-height: 300px;
+            overflow-y: auto;
+            display: none;
+            position: absolute;
+            top: 80px;
+            right: 20px;
+            width: 300px;
+        }
+
+        .carrito-lista .producto-carrito {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-bottom: 1px solid #ff6d9c;
+        }
+
+        .carrito-lista .producto-carrito span {
+            font-size: 1.1em;
+        }
+
+        .btn-eliminar {
+            background-color: #e25893;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-agregar {
+            background-color: #ff6d9c;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-pagar {
+            background-color: #ff6d9c;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            width: 100%;
+            cursor: pointer;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">AuraBella</div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/html/index.html">Inicio</a></li>
+                <li><a href="/html/productos.html">Productos</a></li>
+                <li><a href="/html/servicios.html">Servicios</a></li>
+                <li><a href="/html/blog.html">Blog</a></li>
+                <li><a href="/html/contacto.html">Contáctenos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="productos">
+        <h2>Productos Destacados</h2>
+        <div class="productos-grid">
+            <!-- Producto 1 -->
+            <div class="producto" data-id="1" data-nombre="Crema Hidratante" data-precio="120000">
+                <img src="/productos.jpg/22.jpg" alt="Crema Hidratante">
+                <h3>Crema Hidratante</h3>
+                <p>Precio: COP $120,000</p>
+                <a href="#" class="btn-comprar">Comprar Ahora</a>
+            </div>
+            <!-- Producto 2 -->
+            <div class="producto" data-id="2" data-nombre="Sérum Facial" data-precio="85000">
+                <img src="/productos.jpg/4.jpg" alt="Sérum Facial">
+                <h3>Sérum Facial</h3>
+                <p>Precio: COP $85,000</p>
+                <a href="#" class="btn-comprar">Comprar Ahora</a>
+            </div>
+            <!-- Producto 3 -->
+            <div class="producto" data-id="3" data-nombre="Protector Solar" data-precio="95000">
+                <img src="/productos.jpg/protectorsolar.jpeg" alt="Protector Solar">
+                <h3>Protector Solar</h3>
+                <p>Precio: COP $95,000</p>
+                <a href="#" class="btn-comprar">Comprar Ahora</a>
+            </div>
+            <!-- Producto 4 -->
+            <div class="producto" data-id="4" data-nombre="Tónico Facial" data-precio="50000">
+                <img src="/productos.jpg/2.jpg" alt="Tónico Facial">
+                <h3>Tónico Facial</h3>
+                <p>Precio: COP $50,000</p>
+                <a href="#" class="btn-comprar">Comprar Ahora</a>
+            </div>
+            <!-- Producto 5 -->
+            <div class="producto" data-id="5" data-nombre="Exfoliante Suave" data-precio="65000">
+                <img src="/productos.jpg/1.jpg" alt="Exfoliante Suave">
+                <h3>Exfoliante Suave</h3>
+                <p>Precio: COP $65,000</p>
+                <a href="#" class="btn-comprar">Comprar Ahora</a>
+            </div>
+            <!-- Producto 6 -->
+            <div class="producto" data-id="6" data-nombre="Mascarilla Hidratante" data-precio="70000">
+                <img src="/productos.jpg/6.jpg" alt="Mascarilla Hidratante">
+                <h3>Mascarilla Hidratante</h3>
+                <p>Precio: COP $70,000</p>
+                <a href="#" class="btn-comprar">Comprar Ahora</a>
+            </div>
+            <!-- Producto 7 -->
+            <div class="producto" data-id="7" data-nombre="Limpiador Facial" data-precio="45000">
+                <img src="/productos.jpg/3.jpg" alt="Limpiador Facial">
+                <h3>Limpiador Facial</h3>
+                <p>Precio: COP $45,000</p>
+                <a href="#" class="btn-comprar">Comprar Ahora</a>
+            </div>
+            <!-- Producto 8 -->
+            <div class="producto" data-id="8" data-nombre="Aceite Desmaquillante" data-precio="55000">
+                <img src="/productos.jpg/2.jpg" alt="Aceite Desmaquillante">
+                <h3>Aceite Desmaquillante</h3>
+                <p>Precio: COP $55,000</p>
+                <a href="#" class="btn-comprar">Comprar Ahora</a>
+            </div>
+            <!-- Producto 9 -->
+            <div class="producto" data-id="9" data-nombre="Contorno de Ojos" data-precio="110000">
+                <img src="/productos.jpg/contorno.jpg" alt="Contorno de Ojos">
+                <h3>Contorno de Ojos</h3>
+                <p>Precio: COP $110,000</p>
+                <a href="#" class="btn-comprar">Comprar Ahora</a>
+            </div>
+            <!-- Producto 10 -->
+            <div class="producto" data-id="10" data-nombre="Pack de Mascarillas de Tela (x5)" data-precio="80000">
+                <img src="/productos.jpg/56.jpg" alt="Pack de Mascarillas de Tela">
+                <h3>Pack de Mascarillas de Tela (x5)</h3>
+                <p>Precio: COP $80,000</p>
+                <a href="#" class="btn-comprar">Comprar Ahora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrito de compras -->
+    <div id="carrito" class="carrito">
+        Carrito: 0 productos - COP $0
+    </div>
+
+    <div id="carrito-lista" class="carrito-lista">
+        <h3>Mi Carrito</h3>
+        <div id="productos-carrito"></div>
+        <button id="vaciar-carrito" class="btn-pagar">Vaciar Carrito</button>
+        <div id="total-carrito">
+            <p>Total: COP $0</p>
+            <button id="btn-pagar" class="btn-pagar">Pagar</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 AuraBella. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        let carrito = [];
+
+        // Función para actualizar el carrito y mostrar el total
+        function actualizarCarrito() {
+            const totalProductos = carrito.reduce((total, item) => total + item.cantidad, 0);
+            let totalPrecio = carrito.reduce((total, item) => total + item.precio * item.cantidad, 0);
+            document.getElementById('carrito').innerHTML = `Carrito: ${totalProductos} productos - COP $${totalPrecio}`;
+            document.getElementById('carrito-lista').style.display = totalProductos > 0 ? 'block' : 'none';
+            mostrarProductosCarrito();
+        }
+
+        // Función para mostrar los productos en el carrito
+        function mostrarProductosCarrito() {
+            const listaProductos = document.getElementById('productos-carrito');
+            listaProductos.innerHTML = '';
+            carrito.forEach(producto => {
+                const divProducto = document.createElement('div');
+                divProducto.classList.add('producto-carrito');
+                divProducto.innerHTML = `
+                    <span>${producto.nombre} (x${producto.cantidad}) - COP $${producto.precio * producto.cantidad}</span>
+                    <button class="btn-agregar" onclick="agregarProducto(${producto.id})">Agregar</button>
+                    <button class="btn-eliminar" onclick="eliminarProducto(${producto.id})">Eliminar</button>
+                `;
+                listaProductos.appendChild(divProducto);
+            });
+
+            // Mostrar el total en el carrito
+            let totalPrecio = carrito.reduce((total, item) => total + item.precio * item.cantidad, 0);
+            document.getElementById('total-carrito').querySelector('p').innerHTML = `Total: COP $${totalPrecio}`;
+        }
+
+        // Función para agregar un producto al carrito
+        function agregarProducto(id) {
+            const producto = carrito.find(item => item.id === id);
+            if (producto) {
+                producto.cantidad++;
+            } else {
+                const productoElement = document.querySelector(`.producto[data-id="${id}"]`);
+                const nombre = productoElement.getAttribute('data-nombre');
+                const precio = parseInt(productoElement.getAttribute('data-precio'));
+                carrito.push({ id, nombre, precio, cantidad: 1 });
+            }
+            actualizarCarrito();
+        }
+
+        // Función para eliminar un producto del carrito
+        function eliminarProducto(id) {
+            carrito = carrito.filter(item => item.id !== id);
+            actualizarCarrito();
+        }
+
+        // Función para vaciar el carrito
+        document.getElementById('vaciar-carrito').addEventListener('click', () => {
+            carrito = [];
+            actualizarCarrito();
+        });
+
+        // Función para el pago (aquí solo es una simulación)
+        document.getElementById('btn-pagar').addEventListener('click', () => {
+            alert('Pago realizado con éxito!');
+            carrito = [];
+            actualizarCarrito();
+        });
+
+        // Agregar los productos al carrito cuando se haga click en "Comprar Ahora"
+        document.querySelectorAll('.btn-comprar').forEach((boton) => {
+            boton.addEventListener('click', (e) => {
+                e.preventDefault();
+                const producto = e.target.closest('.producto');
+                const id = producto.getAttribute('data-id');
+                const nombre = producto.getAttribute('data-nombre');
+                const precio = parseInt(producto.getAttribute('data-precio'));
+
+                // Verificar si el producto ya está en el carrito
+                const productoExistente = carrito.find(item => item.id === id);
+                if (productoExistente) {
+                    productoExistente.cantidad += 1;
+                } else {
+                    carrito.push({ id, nombre, precio, cantidad: 1 });
+                }
+
+                // Actualizar el carrito
+                actualizarCarrito();
+            });
+        });
+    </script>
+</body>
+</html>

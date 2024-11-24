@@ -1,0 +1,107 @@
+/* Estilo base */
+body {
+  font-family: 'Poppins', sans-serif; /* Fuente ligera y moderna */
+  margin: 0;
+  padding: 0;
+  background-color: #fff8f5; /* Fondo suave y cálido */
+}
+
+/* Contenedor del chatbot */
+.chatbot-full {
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto;
+  border: 2px solid #fad4d4; /* Tonos pastel */
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  background-color: #fff;
+  overflow: hidden;
+}
+
+/* Encabezado del chatbot */
+.chatbot-header {
+  background-color: #ffe5e5; /* Tonalidad rosada */
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #fad4d4;
+}
+
+.chatbot-header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #0b0b0b; /* Rosa destacado */
+}
+
+.chatbot-header p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #0b0b0b; /* Tono rosado apagado */
+}
+
+/* Ventana de chat */
+.chat-window {
+  max-height: 250px;
+  overflow-y: auto;
+  margin: 10px 20px;
+  padding: 15px;
+  border: 1px solid #ffe5e5;
+  border-radius: 10px;
+  background-color: #fff8f5; /* Fondo cálido */
+}
+
+/* Estilo de mensajes */
+.chat-window div {
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+  width: fit-content;
+  max-width: 80%;
+}
+
+.user-message {
+  background-color: #ffdada; /* Mensaje del usuario */
+  color: #333;
+  align-self: flex-end;
+  margin-left: auto;
+  text-align: right;
+  font-style: italic;
+}
+
+.bot-message {
+  background-color: #ffe5e5; /* Mensaje del bot */
+  color: #282828;
+  align-self: flex-start;
+  margin-right: auto;
+  text-align: left;
+}
+
+/* Opciones del chatbot */
+.chatbot-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 15px 20px;
+  justify-content: center;
+}
+
+.chat-option {
+  flex: 1 1 calc(45% - 10px);
+  padding: 12px 15px;
+  background-color: #ffdada; /* Mensaje del usuario */
+   /* Botones rosa vibrante */
+  color: #151515;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.chat-option:hover {
+  background-color: #fad4d4; /* Color más oscuro al pasar el mouse */
+  transform: scale(1.05);
+}

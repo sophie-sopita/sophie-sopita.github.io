@@ -1,0 +1,99 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff4f5;
+    color: #333;
+  }
+  
+  .header {
+    background-color: #f4b1b1;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .navbar ul li a:hover {
+    background-color: white;
+    color: #f4b1b1;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 50px;
+    background-color: #ffe5e6;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    color: #f4b1b1;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .cta {
+    padding: 10px 20px;
+    background-color: #f4b1b1;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .productos {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .producto img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  
+  .social-links {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2rem;
+  }
+  
+  .social-links a {
+    color: #f4b1b1;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  .social-links a:hover {
+    text-decoration: underline;
+  }
+  

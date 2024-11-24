@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot AuraBella</title>
+    <link rel="stylesheet" href="/css/stylesbot.css">
+</head>
+<body>
+    <div class="chatbot-full">
+        <div class="chatbot-header">
+            <h1>Atención AuraBella</h1>
+            <p>Selecciona una pregunta para recibir información</p>
+        </div>
+        <div class="chatbot-body">
+            <div id="chat-window" class="chat-window"></div>
+            <div class="chatbot-options">
+                <button class="chat-option" onclick="handleOption('ofertas')">Ofertas Nuevas</button>
+                <button class="chat-option" onclick="handleOption('reclamo')">Reclamo de Producto</button>
+                <button class="chat-option" onclick="handleOption('distribuidor')">Ser Distribuidor</button>
+                <button class="chat-option" onclick="handleOption('contacto')">Contacto</button>
+                <button class="chat-option" onclick="handleOption('pago')">Métodos de Pago</button>
+                <button class="chat-option" onclick="handleOption('envio')">Tiempos de Envío</button>
+                <button class="chat-option" onclick="handleOption('promocion')">Cómo participar en promociones</button>
+                <button class="chat-option" onclick="handleOption('reembolso')">Política de Reembolsos</button>
+                <button class="chat-option" onclick="handleOption('cuidados')">Consejos de Cuidado</button>
+                <button class="chat-option" onclick="handleOption('catalogo')">Solicitar Catálogo</button>
+            </div>
+        </div>
+    </div>
+    <script src="chatbot.js"></script>
+</body>
+</html>
