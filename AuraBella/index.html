@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AuraBella - Skincare</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+  <!-- Encabezado -->
+  <header class="header">
+    <div class="logo">AuraBella</div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="/html/index.html">Inicio</a></li>
+        <li><a href="/html/productos.html">Productos</a></li>
+        <li><a href="/html/contacto.html">Servicios</a></li>
+        <li><a href="/html/blog.html">Blog</a></li>
+        <li><a href="/html/contacto.html">Contáctenos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección principal -->
+  <section id="inicio" class="hero">
+    <div class="hero-text">
+      <h1>Tu ruta hacia una piel radiante</h1>
+      <p>Descubre los mejores productos y consejos para cuidar tu piel con AuraBella.</p>
+      <a href="#productos" class="cta">Explorar Productos</a>
+    </div>
+  </section>
+
+  <!-- Productos destacados -->
+  <section id="productos" class="productos">
+    <h2>Productos Populares</h2>
+    <div class="productos-grid">
+      <div class="producto">
+        <img src="/productos.jpg/22.jpg" alt="Crema Hidratante">
+        <h3>Crema Hidratante</h3>
+        <p>$120,000 COP</p>
+        <a href="#" class="btn-comprar">Comprar Ahora</a>
+      </div>
+      <div class="producto">
+        <img src="/productos.jpg/4.jpg" alt="Sérum Facial">
+        <h3>Sérum Facial</h3>
+        <p>$85,000 COP</p>
+        <a href="#" class="btn-comprar">Comprar Ahora</a>
+      </div>
+      <div class="producto">
+        <img src="/productos.jpg/protectorsolar.jpeg" alt="Protector Solar">
+        <h3>Protector Solar</h3>
+        <p>$95,000 COP</p>
+        <a href="#" class="btn-comprar">Comprar Ahora</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Redes sociales -->
+  <section id="social" class="social">
+    <h2>Síguenos</h2>
+    <div class="social-links">
+      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+      <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+    </div>
+  </section>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <p>&copy; 2024 AuraBella. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Chatbot Flotante -->
+  <div id="chatbot-widget">
+    <div id="chat-header" onclick="toggleChat()">
+      <h3>Asistente AuraBella</h3>
+    </div>
+    <div id="chat-body" style="display: none;">
+      <div id="messages"></div>
+      <div id="chat-footer">
+        <input type="text" id="user-input" placeholder="Escribe tu mensaje aquí..." />
+        <button onclick="sendMessage()">Enviar</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.getElementById('chatbot-widget').addEventListener('click', function() {
+      window.location.href = '/html/chatbot.html'; // Redirige a la página chatbot.html
+    });
+  </script>
+</body>
+</html>
